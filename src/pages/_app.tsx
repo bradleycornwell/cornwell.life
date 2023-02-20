@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<ApolloProvider client={apolloClient}>
-			<div style={{ margin: '20px' }}>
+			<div className="bg-green-100">
 				<Component {...pageProps} />
 			</div>
 		</ApolloProvider>

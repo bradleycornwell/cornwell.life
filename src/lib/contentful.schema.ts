@@ -1,25 +1,29 @@
 import { Document } from '@contentful/rich-text-types';
-import { AssetCollection, ContentfulCollection } from 'contentful';
+import { ContentfulCollection } from 'contentful';
 
 export type IContentfulCollectionResponse = {
 	blogCollection: ContentfulCollection<IPost>;
 };
 
+export type IMediaItem = {
+	title: string;
+	description: string;
+	contentType: string;
+	filename: string;
+	url: string;
+	height: number;
+	width: number;
+};
+
 export type IPost = {
 	title: string;
 	slug: string;
-	entry: Document;
+	entry: {
+		json: Document;
+	};
 	date: Date;
 	media: {
-		items: {
-			title: string;
-			description: string;
-			contentType: string;
-			filename: string;
-			url: string;
-			height: number;
-			width: number;
-		}[];
+		items: IMediaItem[];
 	};
 };
 
