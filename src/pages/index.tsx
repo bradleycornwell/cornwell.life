@@ -31,12 +31,19 @@ export default function Home({ posts }: { posts: IPost[] }) {
 					alt="Cornwells in Boston logo"
 				/>
 			</header>
-			<main className="mx-4">
-				<div className="grid grid-cols-1 md:grid-cols-2 pt-4">
+			<main className="mx-4 md:mx-auto max-w-6xl">
+				<div className="grid grid-cols-1 pt-4">
 					{posts.map((post, idx) => (
 						<Card key={idx} post={post} />
 					))}
 				</div>
+				{/* <div className="hidden md:block pt-4">
+					<h3 className="text-xl font-medium">Welcome...</h3>
+					<p>
+						Welcome to our blog we wanted to keep family and friends
+						updated with what is happening in Boston
+					</p>
+				</div> */}
 			</main>
 		</>
 	);

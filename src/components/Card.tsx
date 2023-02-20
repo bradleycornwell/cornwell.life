@@ -41,7 +41,7 @@ const Card = ({ post }: { post: IPost }) => {
 	);
 
 	return (
-		<section className="shadow-lg p-4 bg-grey-100 border-t border-green-300">
+		<section className="shadow-lg p-4 bg-grey-100 border-t border-green-300 max-w-xl mx-auto">
 			<h2 className="font-semibold text-grey-500 py-2">{post.title}</h2>
 			<div ref={sliderRef} className="keen-slider">
 				{post.media.items.map((item, idx) => (
