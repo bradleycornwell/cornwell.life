@@ -33,9 +33,7 @@ const MediaItem = ({ media }: { media: IMediaItem }) => (
 const Card = ({ post }: { post: IPost }) => {
 	const [sliderRef, instanceRef] = useKeenSlider(
 		{
-			slideChanged() {
-				console.log('slide changed');
-			},
+			slideChanged() {},
 		},
 		[
 			// add plugins here
