@@ -20,8 +20,8 @@ export default function Home({ posts }: { posts: IPost[] }) {
 				/>
 				<link rel="icon" href="/favicon.png" />
 			</Head>
-			<header className="bg-green-100 flex place-content-between border-b-2 border-green-300">
-				<h1 className="text-2xl md:text-4xl ml-2 my-auto text-grey-500">
+			<header className="bg-green-100 flex place-content-between border-b-2 border-green-300 px-4 md:px-8">
+				<h1 className="text-2xl md:text-4xl my-auto text-grey-500">
 					Cornwells in Boston
 				</h1>
 				<Image

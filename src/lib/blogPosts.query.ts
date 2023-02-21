@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const BLOGPOSTS_QUERY = gql`
 	query {
-		blogCollection {
+		blogCollection(order: happenedOn_DESC) {
 			total
 			skip
 			limit
