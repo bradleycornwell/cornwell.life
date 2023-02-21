@@ -31,8 +31,8 @@ export default function Home({ posts }: { posts: IPost[] }) {
 					alt="Cornwells in Boston logo"
 				/>
 			</header>
-			<main className="mx-4 md:mx-auto ">
-				<div className="grid grid-cols-1 pt-4">
+			<main className="mx-4">
+				<div className="grid grid-cols-1 pt-4 md:w-[40%] md:mx-auto">
 					{posts.map((post, idx) => (
 						<Card key={idx} post={post} />
 					))}
