@@ -12,6 +12,15 @@ export const BLOGPOSTS_QUERY = gql`
 				entry {
 					json
 				}
+				author {
+					name
+					avatar {
+						title
+						description
+						fileName
+						url
+					}
+				}
 				date: happenedOn
 				media: mediaCollection {
 					total

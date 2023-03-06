@@ -15,6 +15,11 @@ export type IMediaItem = {
 	width: number;
 };
 
+export type IAuthor = {
+	name: string;
+	avatar: IMediaItem;
+};
+
 export type IPost = {
 	title: string;
 	slug: string;
@@ -22,6 +27,7 @@ export type IPost = {
 		json: Document;
 	};
 	date: Date;
+	author: IAuthor;
 	media: {
 		items: IMediaItem[];
 	};

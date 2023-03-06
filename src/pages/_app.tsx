@@ -8,9 +8,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<ApolloProvider client={apolloClient}>
-			<div className="bg-green-100">
+			<main className="bg-green-100">
 				<Component {...pageProps} />
-			</div>
+			</main>
 		</ApolloProvider>
 	);
 }
