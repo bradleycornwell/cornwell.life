@@ -24,6 +24,10 @@ export default function MediaItem({ media }: { media: IMediaItem }) {
 					src={media.url}
 					width={media.width}
 					height={media.height}
+					placeholder={'blur'}
+					blurDataURL={
+						'/cornwells-in-boston-website-favicon-color.png'
+					}
 				/>
 			)}
 		</>

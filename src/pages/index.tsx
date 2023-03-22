@@ -24,6 +24,10 @@ export async function getStaticProps() {
 
 	const response = await apolloClient.query<IContentfulCollectionResponse>({
 		query: BLOGPOSTS_QUERY,
+		variables: {
+			limit: 3,
+			skip: 0,
+		},
 	});
 
 	return {
