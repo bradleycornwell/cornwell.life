@@ -26,7 +26,10 @@ export function Carousel({ items }: { items: IMediaItem[] }) {
 							key={idx}
 							className="keen-slider__slide bg-green-100 rounded-sm"
 						>
-							<MediaItem media={item}></MediaItem>
+							<MediaItem
+								media={item}
+								eagerLoad={idx === 0}
+							></MediaItem>
 						</div>
 					))}
 				</div>

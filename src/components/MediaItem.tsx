@@ -1,7 +1,13 @@
 import { IMediaItem } from '@/lib/contentful.schema';
 import Image from 'next/image';
 
-export default function MediaItem({ media }: { media: IMediaItem }) {
+export default function MediaItem({
+	media,
+	eagerLoad,
+}: {
+	media: IMediaItem;
+	eagerLoad: boolean;
+}) {
 	return (
 		<>
 			{media?.contentType === 'video/mp4' ? (
@@ -24,6 +30,7 @@ export default function MediaItem({ media }: { media: IMediaItem }) {
 					src={media.url}
 					width={media.width}
 					height={media.height}
+					loading={eagerLoad ? 'eager' : 'lazy'}
 					placeholder={'blur'}
 					blurDataURL={
 						'/cornwells-in-boston-website-favicon-color.png'
