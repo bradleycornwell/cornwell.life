@@ -4,6 +4,7 @@ import {
 	ApolloClient,
 	InMemoryCache,
 	NormalizedCacheObject,
+	createHttpLink,
 } from '@apollo/client';
 
 let apolloClient: ApolloClient<NormalizedCacheObject>;
@@ -14,8 +15,15 @@ function createApolloClient(): ApolloClient<NormalizedCacheObject> {
 		uri: 'https://graphql.contentful.com/content/v1/spaces/5era6q4oobt7',
 		cache: new InMemoryCache(),
 		headers: {
-			Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
+			Authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_DELIVERY_TOKEN}`,
 		},
+		link: createHttpLink({
+			uri: 'https://graphql.contentful.com/content/v1/spaces/5era6q4oobt7',
+			credentials: 'same-origin',
+			headers: {
+				Authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_DELIVERY_TOKEN}`,
+			},
+		})
 	});
 }
 
